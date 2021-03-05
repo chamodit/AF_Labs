@@ -8,7 +8,79 @@
 
 <script type="text/javascript">
 
-    console.log("Hello World");
+    //console.log("Hello World");
+
+    /*-------Question 01-------*/
+
+    /*function printHello() {
+        console.log("Hello World!");
+    }*/
+
+    //printHello();
+
+    var printWords = function () {
+        console.log("Hello World!");
+    }
+
+    function print(name) {
+        name();
+    }
+
+    var printHello = function () {
+        return function () {
+            console.log("Have a nice day");
+        }
+    }
+
+    function printer(func) {
+        var execute = func();
+        execute();
+    }
+
+    print(printWords);
+    printer(printHello);
+
+    /*-------Question 02-------*/
+
+    var student = {
+        name: "Chamodi Thennakoon",
+        age: 24,
+        printName: function () {
+            console.log(this.name);
+        }
+    };
+
+    student.printName();
+
+    /*-------Question 03-------*/
+
+    var vehicalName  = "Toyota"; //global object
+
+    function printVehicalName() {
+        console.log(this.vehicalName);
+    }
+
+    /*var car = {
+        vehicalName: 'Nissan',
+        printName: printVehicalName
+    }*/
+
+    var car = {
+        vehicalName: 'Nissan',
+        printName: function () {
+            return function () {
+                console.log(this.vehicalName);
+            }
+        }
+    }
+
+    printVehicalName();
+
+    //car.printName();
+
+    var execute = car.printName();
+    execute();
+
 
 </script>
 
