@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AF Lab 02</title>
+</head>
+<body>
+
+<script type = text/javascript>
+
+    function getValue(callback) {
+        let value = 0;
+        setTimeout(function () {
+            value = 10;
+            //This is the anonymous function define in the line number 29
+            callback(value);
+        }, 1000);
+        return value;
+    }
+
+    function getNewValue(value, callback) {
+        setTimeout(function () {
+            //This is the anonymous function define in the line number 31
+            callback(value * 100);
+        }, 1000);
+    }
+
+    //calling the function defined in line number 11
+    getValue(function (value) {
+        //calling the function defined at line number 21
+        getNewValue(value, function (newValue) {
+            console.log(newValue);
+        });
+    });
+
+</script>
+
+</body>
+</html>
