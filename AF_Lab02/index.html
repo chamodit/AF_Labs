@@ -8,7 +8,14 @@
 
 <script type = text/javascript>
 
-    function getValue(callback) {
+    /*--------Question 01--------*/
+
+    /*let promise = new Promise( function (resolve, reject) {
+       resolve()
+       reject();
+    });*/
+
+    /*function getValue(callback) {
         let value = 0;
         setTimeout(function () {
             value = 10;
@@ -16,22 +23,76 @@
             callback(value);
         }, 1000);
         return value;
-    }
+    }*/
 
-    function getNewValue(value, callback) {
+    /*function getNewValue(value, callback) {
         setTimeout(function () {
             //This is the anonymous function define in the line number 31
             callback(value * 100);
         }, 1000);
-    }
+    }*/
 
-    //calling the function defined in line number 11
-    getValue(function (value) {
+    //calling the function defined in line number 16
+    /*getValue(function (value) {
         //calling the function defined at line number 21
         getNewValue(value, function (newValue) {
             console.log(newValue);
         });
-    });
+    });*/
+
+    function getValue() {
+        let value = 0;
+        //resolve is for success
+        //reject is for error
+        return new Promise(function (resolve, reject) {   //((resolve, reject) => {}) --> Arrow function
+            setTimeout(function () {
+                value = 10;
+                resolve(value);
+            }, 1000);
+        })
+    }
+
+    function getNewValue(value) {
+        return new Promise(function (resolve, reject){
+            setTimeout(function () {
+                resolve(value * 100);
+            }, 1000);
+        })
+    }
+
+    function setValue(value) {
+        return value + 1999;
+    }
+
+    async function print() {
+        let value = await getValue();
+        value = await getNewValue(value); //Inside async function await can be used await to wait executions to be completed
+        value = setValue(value);
+        console.log(value);
+    }
+
+    /*getValue().then(function (value) {
+       return getNewValue(value);
+    }).then(function (value) {
+       console.log(value);
+    });*/
+
+    print();
+
+    const person = {
+        organization : 'Science',
+        people : ['Jane', 'John'],
+        printName : function () {
+            this.people.forEach( (value) => {
+                console.log(value, this.organization);
+            });
+        }
+    };
+
+    person.printName();
+
+
+
 
 </script>
 
