@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b828e7c-7840-4a5d-8b01-85e29ac6815f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AF_Lab02/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/AF_Lab02/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="0b828e7c-7840-4a5d-8b01-85e29ac6815f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +20,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -34,6 +32,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616064685232</updated>
       <workItem from="1616064710203" duration="3204000" />
+      <workItem from="1616340825367" duration="375000" />
     </task>
     <servers />
   </component>
